@@ -3,6 +3,8 @@ Library             SeleniumLibrary
 Library             Easter
 Library             DataDriver    file=../../test_data/Test_data_login.xlsx    sheet=valid_login
 Resource            ../../base/common_functionality.resource
+Resource            ../../pages/LoginPage.resource
+Resource            ../../pages/MainPage.resource
 
 Test Setup          Launch Browse And Navigate To Url
 Task Teardown       Close Browser
@@ -22,6 +24,7 @@ TC4
     [Setup]    None
     Log To Console    Ahsan
     [Teardown]    None
+    
 
 # Valid Login Test
     # Input Text    id=authUser    admin
@@ -41,15 +44,22 @@ TC4
 
 *** Keywords ***
 Valid Login Template
-    [Arguments]    ${username}    ${password}    ${language_choice}    ${expected_title}
-    Input Text    id=authUser    ${username}
-    Input Password    id=clearPass    ${password}
-    Select From List By Label    xpath=//Select[@name='languageChoice']    ${language_choice}
-    Click Element    id=login-button
-    Title Should Be    ${expected_title}
-
-    # driver.execute_script("document.querySelector('#bill-date-long').value='19/04/2002'")
-
     # print(len(context.table.rows))
     # enter dob
     # select gender
+    [Arguments]    ${username}    ${password}    ${language_choice}    ${expected_title}
+    # [Arguments]    ${username}    ${password}    ${language}    ${expected_title}
+    # [Arguments]    ${username}    ${password}    ${language_choice}    ${expected_title}
+    # Input Text    id=authUser    ${username}
+    # Input Password    id=clearPass    ${password}
+    # Select From List By Label    xpath=//Select[@name='languageChoice']    ${language_choice}
+    # Click Element    id=login-button
+    # Title Should Be    ${expected_title}
+
+    # driver.execute_script("document.querySelector('#bill-date-long').value='19/04/2002'")
+
+    Enter Username    ${username}
+    Enter Password    ${password}
+    Select Language By Label    ${language_choice}
+    Click Login
+    Validate Main Page Title    ${expected_title}

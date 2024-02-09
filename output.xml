@@ -1,393 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.7.1 on win32)" generated="20240209 13:05:23.439" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.7.1 on win32)" generated="20240209 14:38:57.852" rpa="false" schemaversion="4">
 <suite id="s1" name="Valid login suite" source="c:\Users\mahsan\Desktop\HealthRecortRobotFramework\tests\1_loginSuite\Valid_login_suite.robot">
-<test id="s1-t1" name="TC1" line="13">
+<test id="s1-t1" name="TC1" line="15">
 <kw name="Launch Browse And Navigate To Url" library="common_functionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240209 13:05:24.464" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20240209 13:05:24.463" endtime="20240209 13:05:30.984"/>
+<msg timestamp="20240209 14:39:00.977" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240209 14:39:00.975" endtime="20240209 14:39:10.832"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240209 13:05:30.985" endtime="20240209 13:05:31.108"/>
+<status status="PASS" starttime="20240209 14:39:10.833" endtime="20240209 14:39:10.965"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240209 13:05:31.109" endtime="20240209 13:05:31.111"/>
+<status status="PASS" starttime="20240209 14:39:10.966" endtime="20240209 14:39:10.968"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240209 13:05:31.113" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
-<status status="PASS" starttime="20240209 13:05:31.112" endtime="20240209 13:05:33.019"/>
+<msg timestamp="20240209 14:39:10.972" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20240209 14:39:10.969" endtime="20240209 14:39:56.588"/>
 </kw>
-<status status="PASS" starttime="20240209 13:05:24.462" endtime="20240209 13:05:33.021"/>
+<status status="PASS" starttime="20240209 14:39:00.970" endtime="20240209 14:39:56.588"/>
 </kw>
 <kw name="Valid Login Template">
 <arg>admin</arg>
 <arg>pass</arg>
 <arg>English (Indian)</arg>
 <arg>OpenEMR</arg>
+<kw name="Enter Username" library="LoginPage">
+<arg>${username}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
+<arg>${LOCATOR_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240209 13:05:33.030" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
-<msg timestamp="20240209 13:05:33.097" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<msg timestamp="20240209 13:05:33.112" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<status status="FAIL" starttime="20240209 13:05:33.028" endtime="20240209 13:05:33.120"/>
+<msg timestamp="20240209 14:39:56.594" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20240209 14:39:56.593" endtime="20240209 14:39:56.710"/>
 </kw>
+<status status="PASS" starttime="20240209 14:39:56.591" endtime="20240209 14:39:56.711"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
+<arg>${LOCATOR_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240209 13:05:33.122" endtime="20240209 13:05:33.123"/>
+<msg timestamp="20240209 14:39:56.714" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20240209 14:39:56.757" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240209 14:39:56.823" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240209 14:39:56.713" endtime="20240209 14:39:56.823"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>xpath=//Select[@name='languageChoice']</arg>
+<status status="PASS" starttime="20240209 14:39:56.711" endtime="20240209 14:39:56.824"/>
+</kw>
+<kw name="Select Language By Label" library="LoginPage">
 <arg>${language_choice}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LOCATOR_language}</arg>
+<arg>${language}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" starttime="20240209 13:05:33.124" endtime="20240209 13:05:33.124"/>
+<msg timestamp="20240209 14:39:56.826" level="INFO">Selecting options from selection list 'xpath=//Select[@name='languageChoice']' by label English (Indian).</msg>
+<status status="PASS" starttime="20240209 14:39:56.825" endtime="20240209 14:39:56.915"/>
 </kw>
+<status status="PASS" starttime="20240209 14:39:56.824" endtime="20240209 14:39:56.915"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=login-button</arg>
+<arg>${LOCATOR_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240209 13:05:33.125" endtime="20240209 13:05:33.125"/>
+<msg timestamp="20240209 14:39:56.917" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20240209 14:39:56.916" endtime="20240209 14:40:20.419"/>
 </kw>
+<status status="PASS" starttime="20240209 14:39:56.916" endtime="20240209 14:40:20.420"/>
+</kw>
+<kw name="Validate Main Page Title" library="MainPage">
+<arg>${expected_title}</arg>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${expected_title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20240209 13:05:33.125" endtime="20240209 13:05:33.125"/>
+<msg timestamp="20240209 14:40:20.445" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20240209 14:40:20.425" endtime="20240209 14:40:20.446"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:33.026" endtime="20240209 13:05:33.126"/>
+<status status="PASS" starttime="20240209 14:40:20.421" endtime="20240209 14:40:20.446"/>
+</kw>
+<status status="PASS" starttime="20240209 14:39:56.590" endtime="20240209 14:40:20.446"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240209 13:05:33.127" endtime="20240209 13:05:35.273"/>
+<status status="PASS" starttime="20240209 14:40:20.449" endtime="20240209 14:40:22.695"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:24.459" endtime="20240209 13:05:35.276">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</status>
+<status status="PASS" starttime="20240209 14:39:00.967" endtime="20240209 14:40:22.697"/>
 </test>
-<test id="s1-t2" name="TC2" line="13">
+<test id="s1-t2" name="TC2" line="15">
 <kw name="Launch Browse And Navigate To Url" library="common_functionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240209 13:05:35.297" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20240209 13:05:35.296" endtime="20240209 13:05:42.411"/>
+<msg timestamp="20240209 14:40:22.709" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240209 14:40:22.707" endtime="20240209 14:40:28.594"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240209 13:05:42.412" endtime="20240209 13:05:42.536"/>
+<status status="PASS" starttime="20240209 14:40:28.595" endtime="20240209 14:40:28.714"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240209 13:05:42.536" endtime="20240209 13:05:42.542"/>
+<status status="PASS" starttime="20240209 14:40:28.715" endtime="20240209 14:40:28.720"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240209 13:05:42.543" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
-<status status="PASS" starttime="20240209 13:05:42.543" endtime="20240209 13:05:49.796"/>
+<msg timestamp="20240209 14:40:28.723" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20240209 14:40:28.720" endtime="20240209 14:40:38.770"/>
 </kw>
-<status status="PASS" starttime="20240209 13:05:35.294" endtime="20240209 13:05:49.796"/>
+<status status="PASS" starttime="20240209 14:40:22.706" endtime="20240209 14:40:38.772"/>
 </kw>
 <kw name="Valid Login Template">
 <arg>accountant</arg>
 <arg>accountant</arg>
 <arg>English (Indian)</arg>
 <arg>OpenEMR</arg>
+<kw name="Enter Username" library="LoginPage">
+<arg>${username}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
+<arg>${LOCATOR_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240209 13:05:49.805" level="INFO">Typing text 'accountant' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20240209 13:05:49.803" endtime="20240209 13:05:49.957"/>
+<msg timestamp="20240209 14:40:38.778" level="INFO">Typing text 'accountant' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20240209 14:40:38.776" endtime="20240209 14:40:38.888"/>
 </kw>
+<status status="PASS" starttime="20240209 14:40:38.776" endtime="20240209 14:40:38.888"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
+<arg>${LOCATOR_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240209 13:05:49.959" level="INFO">Typing password into text field 'id=clearPass'.</msg>
-<msg timestamp="20240209 13:05:50.008" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240209 13:05:50.063" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240209 13:05:49.958" endtime="20240209 13:05:50.064"/>
+<msg timestamp="20240209 14:40:38.891" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20240209 14:40:38.937" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240209 14:40:39.004" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240209 14:40:38.890" endtime="20240209 14:40:39.006"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>xpath=//Select[@name='languageChoice']</arg>
+<status status="PASS" starttime="20240209 14:40:38.889" endtime="20240209 14:40:39.007"/>
+</kw>
+<kw name="Select Language By Label" library="LoginPage">
 <arg>${language_choice}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LOCATOR_language}</arg>
+<arg>${language}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20240209 13:05:50.067" level="INFO">Selecting options from selection list 'xpath=//Select[@name='languageChoice']' by label English (Indian).</msg>
-<status status="PASS" starttime="20240209 13:05:50.064" endtime="20240209 13:05:50.265"/>
+<msg timestamp="20240209 14:40:39.011" level="INFO">Selecting options from selection list 'xpath=//Select[@name='languageChoice']' by label English (Indian).</msg>
+<status status="PASS" starttime="20240209 14:40:39.009" endtime="20240209 14:40:39.106"/>
 </kw>
+<status status="PASS" starttime="20240209 14:40:39.008" endtime="20240209 14:40:39.107"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=login-button</arg>
+<arg>${LOCATOR_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240209 13:05:50.269" level="INFO">Clicking element 'id=login-button'.</msg>
-<status status="PASS" starttime="20240209 13:05:50.266" endtime="20240209 13:05:53.567"/>
+<msg timestamp="20240209 14:40:39.110" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20240209 14:40:39.109" endtime="20240209 14:41:08.511"/>
 </kw>
+<status status="PASS" starttime="20240209 14:40:39.108" endtime="20240209 14:41:08.512"/>
+</kw>
+<kw name="Validate Main Page Title" library="MainPage">
+<arg>${expected_title}</arg>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${expected_title}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20240209 13:05:53.580" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<msg timestamp="20240209 13:05:53.618" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<status status="FAIL" starttime="20240209 13:05:53.568" endtime="20240209 13:05:53.626"/>
+<msg timestamp="20240209 14:41:08.535" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20240209 14:41:08.515" endtime="20240209 14:41:08.536"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:49.801" endtime="20240209 13:05:53.629"/>
+<status status="PASS" starttime="20240209 14:41:08.513" endtime="20240209 14:41:08.537"/>
+</kw>
+<status status="PASS" starttime="20240209 14:40:38.774" endtime="20240209 14:41:08.538"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240209 13:05:53.646" endtime="20240209 13:05:55.807"/>
+<status status="PASS" starttime="20240209 14:41:08.540" endtime="20240209 14:41:10.860"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:35.289" endtime="20240209 13:05:55.809">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</status>
+<status status="PASS" starttime="20240209 14:40:22.701" endtime="20240209 14:41:10.862"/>
 </test>
-<test id="s1-t3" name="TC3" line="13">
+<test id="s1-t3" name="TC3" line="15">
 <kw name="Launch Browse And Navigate To Url" library="common_functionality" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240209 13:05:55.834" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20240209 13:05:55.831" endtime="20240209 13:06:02.809"/>
+<msg timestamp="20240209 14:41:10.873" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240209 14:41:10.872" endtime="20240209 14:41:16.616"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<msg timestamp="20240209 13:06:12.426" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1FDA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:16.525" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50AF9CF8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:20.634" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1F128&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:24.715" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=55172): Max retries exceeded with url: /session/bba2e6586eacc11c241ddff2d705a164/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1F2E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20240209 13:06:24.721" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
-<status status="FAIL" starttime="20240209 13:06:02.809" endtime="20240209 13:06:24.761"/>
+<status status="PASS" starttime="20240209 14:41:16.618" endtime="20240209 14:41:16.747"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" starttime="20240209 13:06:24.763" endtime="20240209 13:06:24.764"/>
+<status status="PASS" starttime="20240209 14:41:16.747" endtime="20240209 14:41:16.749"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20240209 13:06:24.766" endtime="20240209 13:06:24.767"/>
+<msg timestamp="20240209 14:41:16.752" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20240209 14:41:16.750" endtime="20240209 14:41:39.192"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:55.829" endtime="20240209 13:06:24.768"/>
+<status status="PASS" starttime="20240209 14:41:10.871" endtime="20240209 14:41:39.192"/>
+</kw>
+<kw name="Valid Login Template">
+<arg>physician</arg>
+<arg>physician</arg>
+<arg>Dutch</arg>
+<arg>OpenEMR</arg>
+<kw name="Enter Username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240209 14:41:39.197" level="INFO">Typing text 'physician' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20240209 14:41:39.196" endtime="20240209 14:41:39.310"/>
+</kw>
+<status status="PASS" starttime="20240209 14:41:39.195" endtime="20240209 14:41:39.311"/>
+</kw>
+<kw name="Enter Password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LOCATOR_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240209 14:41:39.313" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20240209 14:41:39.372" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240209 14:41:39.463" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240209 14:41:39.312" endtime="20240209 14:41:39.464"/>
+</kw>
+<status status="PASS" starttime="20240209 14:41:39.311" endtime="20240209 14:41:39.464"/>
+</kw>
+<kw name="Select Language By Label" library="LoginPage">
+<arg>${language_choice}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LOCATOR_language}</arg>
+<arg>${language}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240209 14:41:39.469" level="INFO">Selecting options from selection list 'xpath=//Select[@name='languageChoice']' by label Dutch.</msg>
+<status status="PASS" starttime="20240209 14:41:39.466" endtime="20240209 14:41:39.568"/>
+</kw>
+<status status="PASS" starttime="20240209 14:41:39.465" endtime="20240209 14:41:39.568"/>
+</kw>
+<kw name="Click Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240209 14:41:39.571" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20240209 14:41:39.570" endtime="20240209 14:42:10.528"/>
+</kw>
+<status status="PASS" starttime="20240209 14:41:39.569" endtime="20240209 14:42:10.529"/>
+</kw>
+<kw name="Validate Main Page Title" library="MainPage">
+<arg>${expected_title}</arg>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240209 14:42:10.549" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20240209 14:42:10.531" endtime="20240209 14:42:10.550"/>
+</kw>
+<status status="PASS" starttime="20240209 14:42:10.529" endtime="20240209 14:42:10.550"/>
+</kw>
+<status status="PASS" starttime="20240209 14:41:39.193" endtime="20240209 14:42:10.551"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<msg timestamp="20240209 13:06:28.866" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10A20&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
-<msg timestamp="20240209 13:06:32.962" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10DD8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
-<msg timestamp="20240209 13:06:37.058" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10198&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
-<status status="PASS" starttime="20240209 13:06:24.770" endtime="20240209 13:06:45.238"/>
+<status status="PASS" starttime="20240209 14:42:10.553" endtime="20240209 14:42:12.825"/>
 </kw>
-<status status="FAIL" starttime="20240209 13:05:55.824" endtime="20240209 13:06:45.241">Setup failed:
-ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
+<status status="PASS" starttime="20240209 14:41:10.867" endtime="20240209 14:42:12.827"/>
 </test>
-<status status="FAIL" starttime="20240209 13:05:23.444" endtime="20240209 13:06:45.249"/>
+<status status="PASS" starttime="20240209 14:38:57.861" endtime="20240209 14:42:12.833"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="3" skip="0" id="s1" name="Valid login suite">Valid login suite</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Valid login suite">Valid login suite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240209 13:05:33.097" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<msg timestamp="20240209 13:05:53.580" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.161)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7210C5E42+3538674]
-	(No symbol) [0x00007FF720CE4C02]
-	(No symbol) [0x00007FF720B95AEB]
-	(No symbol) [0x00007FF720B7288C]
-	(No symbol) [0x00007FF720C05DD7]
-	(No symbol) [0x00007FF720C1B40F]
-	(No symbol) [0x00007FF720BFEE53]
-	(No symbol) [0x00007FF720BCF514]
-	(No symbol) [0x00007FF720BD0631]
-	GetHandleVerifier [0x00007FF7210F6CAD+3738973]
-	GetHandleVerifier [0x00007FF72114C506+4089270]
-	GetHandleVerifier [0x00007FF721144823+4057299]
-	GetHandleVerifier [0x00007FF720E15C49+720121]
-	(No symbol) [0x00007FF720CF126F]
-	(No symbol) [0x00007FF720CEC304]
-	(No symbol) [0x00007FF720CEC432]
-	(No symbol) [0x00007FF720CDBD04]
-	(No symbol) [0x00007FFD84C67344]
-	RtlUserThreadStart [0x00007FFD85E826B1+33]
-</msg>
-<msg timestamp="20240209 13:06:12.426" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1FDA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:16.525" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50AF9CF8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:20.634" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1F128&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164/screenshot</msg>
-<msg timestamp="20240209 13:06:24.715" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=55172): Max retries exceeded with url: /session/bba2e6586eacc11c241ddff2d705a164/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B1F2E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20240209 13:06:28.866" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10A20&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
-<msg timestamp="20240209 13:06:32.962" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10DD8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
-<msg timestamp="20240209 13:06:37.058" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020F50B10198&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bba2e6586eacc11c241ddff2d705a164</msg>
 </errors>
 </robot>
